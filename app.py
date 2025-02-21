@@ -103,7 +103,7 @@ def main():
             body {
                 margin: 0;
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                background: url('https://source.unsplash.com/1600x900/?abstract,light') no-repeat center center fixed;
+                background: url('https://img1.wallspic.com/crops/8/3/6/8/3/138638/138638-red_and_white_bokeh_lights-3840x2160.jpg') no-repeat center center fixed;
                 background-size: cover;
                 color: #fff;
             }
