@@ -7,7 +7,7 @@ from unstructured.partition.pdf import partition_pdf
 import nltk
 nltk.download('all')
 
-
+#guna
 ## Table extraction function (using unstructured package)
 def extract_tables_from_pdf(filename, strategy='hi_res'):
     """
@@ -95,7 +95,7 @@ def main():
         layout="wide",
         page_icon="📈",
     )
-
+    #guna
     # Custom CSS for additional styling
     st.markdown("""
         <style>
@@ -234,7 +234,7 @@ def main():
             with open(st.session_state.temp_filename, "wb") as f:
                 f.write(uploaded_file.getbuffer())
             st.markdown('<div class="success">✅ PDF Uploaded Successfully!</div>', unsafe_allow_html=True)
-
+    #guna
     if uploaded_file is not None:
         try:
             # ------------------ Table Extraction ------------------
