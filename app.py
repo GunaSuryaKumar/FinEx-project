@@ -99,38 +99,70 @@ def main():
     # Custom CSS for additional styling
     st.markdown("""
         <style>
+            /* Overall page styling */
+            body {
+                margin: 0;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                background: url('https://source.unsplash.com/1600x900/?abstract,light') no-repeat center center fixed;
+                background-size: cover;
+                color: #fff;
+            }
+
+            /* Header container with animation */
             .header-container {
-                background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
-                padding: 20px;
+                padding: 30px;
                 border-radius: 15px;
                 margin-bottom: 30px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                background: rgba(0, 0, 0, 0.7);
+                position: relative;
+                overflow: hidden;
             }
 
-            .section {
-                background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
-                padding: 25px;
-                border-radius: 15px;
-                margin-bottom: 30px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            .header-container::after {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 40%);
+                animation: rotateBg 20s linear infinite;
             }
 
+            @keyframes rotateBg {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            /* Header text with mixed accent color */
             .header {
                 font-size: 2.5em;
                 font-weight: 800;
                 text-align: center;
-                background: linear-gradient(120deg, #0D6EFD 0%, #0B5ED7 100%);
+                background: linear-gradient(120deg, #ffffff 0%, #c0c0c0 50%, #ff9900 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 margin: 0;
                 padding: 10px;
                 letter-spacing: 1px;
+                position: relative;
+                z-index: 1;
             }
 
+            /* Section styling with subtle shadow */
+            .section {
+                background: rgba(255, 255, 255, 0.05);
+                padding: 25px;
+                border-radius: 15px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Subheader styling */
             .subheader {
                 font-size: 1.8em;
                 font-weight: 600;
-                background: linear-gradient(120deg, #0D6EFD 0%, #0B5ED7 100%);
+                background: linear-gradient(120deg, #ffffff 0%, #c0c0c0 50%, #ff9900 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 margin-top: 20px;
@@ -138,43 +170,19 @@ def main():
                 text-align: left;
             }
 
+            /* Table container with translucent background */
             .table-container {
-                background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+                background: rgba(0, 0, 0, 0.5);
                 padding: 20px;
                 border-radius: 10px;
                 margin: 20px 0;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             }
 
-            @media (prefers-color-scheme: dark) {
-                .header-container {
-                    background: linear-gradient(135deg, #212529 0%, #343A40 100%);
-                }
-                
-                .section {
-                    background: linear-gradient(135deg, #212529 0%, #2B3035 100%);
-                }
-                
-                .table-container {
-                    background: linear-gradient(135deg, #212529 0%, #2B3035 100%);
-                }
-                
-                .header {
-                    background: linear-gradient(120deg, #6EA8FE 0%, #9EC5FE 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                
-                .subheader {
-                    background: linear-gradient(120deg, #6EA8FE 0%, #9EC5FE 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-
+            /* Button styling */
             .stButton > button {
-                background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-                color: white;
+                background: linear-gradient(135deg, #333 0%, #555 100%);
+                color: #fff;
                 border: none;
                 padding: 10px 20px;
                 border-radius: 5px;
@@ -182,11 +190,20 @@ def main():
             }
 
             .stButton > button:hover {
-                background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                background: linear-gradient(135deg, #555 0%, #777 100%);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
             }
         </style>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="#" 
+            onclick="window.print()" 
+            style="text-decoration: none; font-size: 1.2em; color: #ff9900; border: 2px solid #ff9900; padding: 8px 16px; border-radius: 5px; transition: background 0.3s ease;">
+                Download Page as PDF
+            </a>
+        </div>
     """, unsafe_allow_html=True)
+
 
     # Update the header with container
     st.markdown("""
