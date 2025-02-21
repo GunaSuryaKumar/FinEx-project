@@ -95,55 +95,19 @@ def main():
         layout="wide",
         page_icon="📈",
     )
-    # Sidebar theme toggle
-    theme = st.sidebar.radio("Select Theme", ["Light", "Dark"])
 
-    # Inject custom CSS based on selected theme
-    if theme == "Light":
-        st.markdown("""
-            <style>
-                :root {
-                    --primary-color: #333;
-                    --secondary-color: #555;
-                    --accent-color: #ff9900;
-                    --header-bg: rgba(255, 255, 255, 0.8);
-                    --section-bg: rgba(255, 255, 255, 0.6);
-                    --background-image: url('https://source.unsplash.com/1600x900/?abstract,light');
-                    --body-text-color: #000;
-                }
-                body {
-                    background: var(--background-image) no-repeat center center fixed;
-                    background-size: cover;
-                    color: var(--body-text-color);
-                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                }
-            </style>
-        """, unsafe_allow_html=True)
-    else:
-        st.markdown("""
-            <style>
-                :root {
-                    --primary-color: #ddd;
-                    --secondary-color: #aaa;
-                    --accent-color: #ff9900;
-                    --header-bg: rgba(0, 0, 0, 0.8);
-                    --section-bg: rgba(0, 0, 0, 0.6);
-                    --background-image: url('https://source.unsplash.com/1600x900/?abstract,dark');
-                    --body-text-color: #fff;
-                }
-                body {
-                    background: var(--background-image) no-repeat center center fixed;
-                    background-size: cover;
-                    color: var(--body-text-color);
-                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                }
-            </style>
-        """, unsafe_allow_html=True)
-
-# Combined CSS with header animations, button styling, and the PDF download link
     # Custom CSS for additional styling
     st.markdown("""
         <style>
+            /* Overall page styling */
+            body {
+                margin: 0;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                background: url('https://source.unsplash.com/1600x900/?abstract,light') no-repeat center center fixed;
+                background-size: cover;
+                color: #fff;
+            }
+
             /* Header container with animation */
             .header-container {
                 padding: 30px;
