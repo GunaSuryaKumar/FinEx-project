@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import os
 import uuid
@@ -194,15 +195,16 @@ def main():
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
             }
         </style>
-
+    """, unsafe_allow_html=True)
+    components.html("""
         <div style="text-align: center; margin-bottom: 20px;">
             <a href="#" 
-            onclick="window.print()" 
-            style="text-decoration: none; font-size: 1.2em; color: #ff9900; border: 2px solid #ff9900; padding: 8px 16px; border-radius: 5px; transition: background 0.3s ease;">
+               onclick="window.print()" 
+               style="text-decoration: none; font-size: 1.2em; color: #ff9900; border: 2px solid #ff9900; padding: 8px 16px; border-radius: 5px; transition: background 0.3s ease;">
                 Download Page as PDF
             </a>
         </div>
-    """, unsafe_allow_html=True)
+    """, height=100)
 
 
     # Update the header with container
