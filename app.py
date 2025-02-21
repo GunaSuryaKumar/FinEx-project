@@ -208,7 +208,7 @@ def main():
     # Update the header with container
     st.markdown("""
         <div class="header-container">
-            <h1 class="header">📄 PDF Table Extraction and Summarization</h1>
+            <h1 class="header">📄 Smart Table Extraction and Summarization</h1>
         </div>
     """, unsafe_allow_html=True)
 
