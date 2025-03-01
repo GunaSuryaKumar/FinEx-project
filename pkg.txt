@@ -1,2 +1,2 @@
-poppler-utils #A collection of command-line tools for working with PDF files, including converting them to other formats.
-tesseract-ocr #An optical character recognition (OCR) engine that can extract text from images.
+poppler-utils
+tesseract-ocr
