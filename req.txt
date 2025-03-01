@@ -1,34 +1,34 @@
-streamlit>=1.12.0             # Core framework for building interactive web apps
-pandas>=1.3.0                # Data manipulation and analysis library
-numpy>=1.24.0                # Fundamental package for numerical computations
-PyPDF2>=3.0.0                # Library for PDF file handling and manipulation
-pdf2image>=1.16.0            # Convert PDF pages into images for further processing
-pytesseract>=0.3.10          # OCR tool to extract text from images
-python-dotenv>=1.0.0         # Load environment variables from a .env file
-opencv-python-headless>=4.6.0  # Computer vision library (headless to avoid GUI dependencies)
+streamlit>=1.12.0
+pandas>=1.3.0
+numpy>=1.24.0
+PyPDF2>=3.0.0
+pdf2image>=1.16.0
+pytesseract>=0.3.10
+python-dotenv>=1.0.0
+opencv-python-headless>=4.6.0  # Use headless version to avoid GUI dependencies
 
 # ML and AI Dependencies
-torch>=1.10.0                # Deep learning framework for tensor computations
-torchvision>=0.15.0          # Computer vision library with pre-trained models and transforms
-torchaudio>=2.0.0            # Audio processing capabilities integrated with PyTorch
-transformers>=4.0.0          # Library for state-of-the-art NLP models and pipelines
-datasets>=2.0.0              # Easy-to-use dataset library for machine learning and NLP
-bitsandbytes==0.42.0         # Memory-efficient optimization library for large models
-accelerate>=0.26.0           # Simplifies multi-GPU/TPU training and inference
-mistralai>=0.0.1             # API client for Mistral language model inference
+torch>=1.10.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+transformers>=4.0.0
+datasets>=2.0.0
+bitsandbytes==0.42.0
+accelerate>=0.26.0
+mistralai>=0.0.1
 
 # Document Processing
-unstructured[all-docs]>=0.4.0  # Toolkit for extracting content from unstructured documents
-lxml>=4.6.0                 # Fast and feature-rich library for processing XML and HTML
-Pillow>=8.0.0               # Python Imaging Library for image processing tasks
-PyMuPDF>=1.18.0             # Library for efficient PDF and document processing
-pdfplumber                  # Extract tables and text from PDF files
+unstructured[all-docs]>=0.4.0
+lxml>=4.6.0
+Pillow>=8.0.0
+PyMuPDF>=1.18.0
+pdfplumber
 
 # Development Tools
-ipython>=8.0.0              # Enhanced interactive Python shell for development
+ipython>=8.0.0
 
 # Optional Dependencies
-beautifulsoup4>=4.9.3       # Robust library for parsing HTML and XML (useful for table parsing)
-html5lib>=1.1               # Alternative HTML parser to handle non-standard HTML
-tabulate>=0.8.9             # Format data into visually appealing tables in the console
-nltk                        # Natural Language Toolkit for text processing and language data
+beautifulsoup4>=4.9.3  # For table parsing
+html5lib>=1.1  # Alternative HTML parser
+tabulate>=0.8.9  # For table formatting
+nltk
